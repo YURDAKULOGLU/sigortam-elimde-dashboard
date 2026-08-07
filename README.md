@@ -1,32 +1,37 @@
-# React + TypeScript + Vite
+# Sigortam Elimde — Dashboard (V1 demo)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Frontend-only demo of the "Sigortam Elimde" insurance policy dashboard,
+built from the V1 Dashboard Master Spec. No backend, auth, OCR or real
+insurer integration — mock data only, but every interactive element responds
+(modal, toast, upload states, fake loading).
 
-Currently, two official plugins are available:
+**Live:** https://yurdakuloglu.github.io/sigortam-elimde-dashboard/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+Vite + React + TypeScript + Tailwind CSS v4 (theme tokens in `src/index.css`),
+`lucide-react` icons. Static export, deployed to GitHub Pages from `docs/`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scope
 
-## Expanding the Oxlint configuration
+- Welcome/status header, three quick-action panels (Poliçe Karşılaştır,
+  Poliçe Sağlık Raporu, Kaza Yaptım) — each a distinct layout, not repeated
+  cards.
+- Policies list (row/divider style), renewals list, insight card, empty
+  state, and full modal set with upload states (empty/hover/uploading/
+  success/error) and toast notifications.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Develop
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
+npm run build     # outputs dist/
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+`docs/` is a committed static build used directly by GitHub Pages
+(`main` branch, `/docs` path). Rebuild it after changes:
+
+```bash
+npm run build && rm -rf docs && cp -r dist docs
+```
