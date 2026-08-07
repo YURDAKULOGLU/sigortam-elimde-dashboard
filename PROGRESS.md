@@ -18,3 +18,14 @@
 - [x] GitHub repo created + pushed
 - [x] GitHub Pages published (docs/ on main)
 - [x] Live URL verified 200 + real content
+
+## De-AI pass (owner feedback: "site çok AI olmuş")
+- [x] Removed waving-hand emoji from greeting (no emoji anywhere in product UI)
+- [x] Replaced marketing-coach hero subtitle with factual status line (active policy count + nearest renewal)
+- [x] Renamed "Ne yapmak istersin?" to "İşlemler"
+- [x] Cut "kolayca"/"hızla"/"tek yerden" filler and redundant helper sentences under headings
+- [x] Replaced stock Tailwind blue (#155EEF) with deep ink-petrol brand color (#12403E), adjusted all derived/semantic tokens
+- [x] Simplified empty-state benefit triad from icon-bubble row to plain text
+- [x] Rebuilt, verified emoji/old copy/old color absent from the live production bundle (cache-busted fetch)
+- [x] Committed and pushed; GitHub Pages serving new build confirmed
+- [ ] Playwright visual screenshots — MCP server disconnected this session; verified via build-output/live-bundle string inspection instead (documented in final report)
