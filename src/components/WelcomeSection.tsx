@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react";
-import { user } from "../data/policies";
+import { user, renewals } from "../data/policies";
 
 type WelcomeSectionProps = {
   onAddPolicy: () => void;
@@ -13,16 +13,21 @@ function greeting() {
   return "İyi akşamlar";
 }
 
+function statusLine() {
+  const nearest = [...renewals].sort((a, b) => a.daysRemaining - b.daysRemaining)[0];
+  const policyCount = `${user.activePolicies} aktif poliçen var.`;
+  if (!nearest) return policyCount;
+  return `${policyCount} ${nearest.title} yenilenmesine ${nearest.daysRemaining} gün kaldı.`;
+}
+
 export function WelcomeSection({ onAddPolicy }: WelcomeSectionProps) {
   return (
     <section className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
       <div>
         <h1 className="text-[26px] font-semibold leading-tight text-[var(--text-primary)] sm:text-[32px]">
-          {greeting()}, {user.firstName} 👋
+          {greeting()}, {user.firstName}
         </h1>
-        <p className="mt-1.5 max-w-xl text-sm text-[var(--text-secondary)] sm:text-base">
-          Sigortalarını tek yerden takip et, poliçelerini karşılaştır ve önemli detayları kolayca gör.
-        </p>
+        <p className="mt-1.5 text-sm text-[var(--text-secondary)] sm:text-base">{statusLine()}</p>
       </div>
       <button
         type="button"

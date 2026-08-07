@@ -40,9 +40,7 @@ export function AddPolicyModal({ open, onClose }: AddPolicyModalProps) {
 
   return (
     <Modal open={open} onClose={handleClose} title="Yeni Poliçe Ekle">
-      <p className="text-sm text-[var(--text-secondary)]">
-        Poliçeni ekleyerek yenileme tarihlerini ve önemli detaylarını tek yerden takip et.
-      </p>
+      <p className="text-sm text-[var(--text-secondary)]">Poliçe türünü seç ve bilgileri gir.</p>
 
       <div className="mt-5">
         <div className="mb-2 text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]">

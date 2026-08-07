@@ -30,7 +30,7 @@ export function HealthReportModal({ open, onClose }: HealthReportModalProps) {
   return (
     <Modal open={open} onClose={handleClose} title="Poliçe Sağlık Raporu">
       <p className="text-sm text-[var(--text-secondary)]">
-        Poliçeni yükle, önemli teminatları ve dikkat edilmesi gereken maddeleri gör.
+        Poliçeni yükle. Teminatları ve dikkat edilmesi gereken maddeleri listeler.
       </p>
 
       <div className="mt-5">

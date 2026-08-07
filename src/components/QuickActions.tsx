@@ -11,8 +11,8 @@ export function QuickActions({ onCompare, onHealthReport, onAccident }: QuickAct
   const [policyA, policyB] = policies;
 
   return (
-    <section aria-label="Ne yapmak istersin?" className="flex flex-col gap-4">
-      <h2 className="text-[20px] font-semibold text-[var(--text-primary)]">Ne yapmak istersin?</h2>
+    <section aria-label="İşlemler" className="flex flex-col gap-4">
+      <h2 className="text-[20px] font-semibold text-[var(--text-primary)]">İşlemler</h2>
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
         {/* Poliçe Karşılaştır — dominant working area, 6/12 */}
@@ -20,7 +20,7 @@ export function QuickActions({ onCompare, onHealthReport, onAccident }: QuickAct
           <div>
             <h3 className="text-[17px] font-semibold text-[var(--text-primary)]">Poliçe Karşılaştır</h3>
             <p className="mt-1.5 text-sm text-[var(--text-secondary)]">
-              İki poliçeyi yan yana incele. Teminat, limit ve önemli şartlardaki farkları kolayca gör.
+              İki poliçeyi yan yana incele. Teminat, limit ve şart farkları görünür.
             </p>
 
             <div className="mt-5 flex items-center justify-center gap-3 rounded-[10px] bg-[var(--surface-secondary)] px-4 py-4 sm:gap-6 sm:px-6">
@@ -61,7 +61,7 @@ export function QuickActions({ onCompare, onHealthReport, onAccident }: QuickAct
               Poliçe Sağlık Raporu
             </div>
             <p className="mt-2.5 text-sm text-[var(--text-secondary)]">
-              Poliçendeki güçlü tarafları ve dikkat edilmesi gereken şartları anlaşılır biçimde gör.
+              Poliçendeki güçlü ve zayıf noktaları, dikkat edilmesi gereken şartları listeler.
             </p>
             <div className="mt-4 border-t border-[var(--border)] pt-3">
               <div className="text-xs text-[var(--text-muted)]">Son analiz</div>
@@ -85,7 +85,7 @@ export function QuickActions({ onCompare, onHealthReport, onAccident }: QuickAct
             <TriangleAlert size={18} className="text-[var(--warning)]" aria-hidden />
             <h3 className="mt-2.5 text-[17px] font-semibold text-[var(--text-primary)]">Kaza Yaptım</h3>
             <p className="mt-1.5 text-sm text-[var(--text-secondary)]">
-              Kaza sonrası yapman gerekenleri adım adım takip et ve poliçe bilgilerine hızla ulaş.
+              Kaza sonrası yapman gerekenler ve poliçe bilgilerine erişim burada.
             </p>
           </div>
           <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--text-primary)]">

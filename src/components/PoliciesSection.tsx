@@ -13,10 +13,7 @@ export function PoliciesSection({ onAddPolicy }: PoliciesSectionProps) {
   return (
     <section className="flex flex-col gap-3">
       <div className="flex items-baseline justify-between">
-        <div>
-          <h2 className="text-[20px] font-semibold text-[var(--text-primary)]">Sigortalarım</h2>
-          <p className="mt-0.5 text-sm text-[var(--text-secondary)]">Aktif poliçelerini tek ekrandan takip et.</p>
-        </div>
+        <h2 className="text-[20px] font-semibold text-[var(--text-primary)]">Sigortalarım</h2>
         <button type="button" className="text-sm font-medium text-[var(--brand-primary)] hover:underline">
           Tümünü Gör
         </button>
